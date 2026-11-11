@@ -204,10 +204,10 @@ section{padding:clamp(72px,10vw,128px) 0}
 .voice-feature blockquote{font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(1.35rem,2.8vw,2.05rem);line-height:1.38;letter-spacing:-.015em;color:var(--navy)}
 .voice-feature blockquote em{font-style:normal;color:var(--vermilion)}
 .voice-feature .person{margin-top:34px}
-.voices-row{display:grid;grid-template-columns:1fr 1fr;max-width:940px;margin:clamp(56px,7vw,80px) auto 0;position:relative;border-top:1px solid var(--sand)}
-.voices-row::before{content:"";position:absolute;left:50%;top:clamp(32px,4vw,48px);bottom:0;width:1px;background:var(--sand)}
-.voices-row::after{content:"";position:absolute;left:50%;top:-5px;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--vermilion);box-shadow:0 0 0 6px var(--ivory)}
-.voice-small{padding:clamp(32px,4vw,48px) clamp(16px,4vw,52px) 0}
+.voices-row{display:grid;grid-template-columns:1fr 1fr;max-width:940px;margin:0 auto;position:relative}
+.voices-row::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--sand)}
+.voices-row::after{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:var(--vermilion);box-shadow:0 0 0 6px var(--ivory)}
+.voice-small{padding:8px clamp(16px,4vw,52px)}
 .voice-small .qmark{font-family:Manrope,sans-serif;font-weight:800;font-size:3rem;line-height:.8;color:var(--caramel);height:26px;margin-bottom:10px}
 .voice-small blockquote{font-size:1.02rem;line-height:1.7;color:var(--charcoal);font-style:italic}
 .voice-small .person{margin-top:22px}
@@ -315,8 +315,8 @@ section{padding:clamp(72px,10vw,128px) 0}
 }
 @media (max-width:980px){
   .voices-row{grid-template-columns:1fr;max-width:560px}
-  .voices-row::before{display:none}
-  .voice-small + .voice-small{border-top:1px solid var(--sand);margin-top:36px}
+  .voices-row::before,.voices-row::after{display:none}
+  .voice-small + .voice-small{border-top:1px solid var(--sand);margin-top:36px;padding-top:40px}
   .grid-3{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
   .about{grid-template-columns:1fr;grid-template-areas:"photo" "head" "text";max-width:680px}
   .portrait{width:min(62%,240px);margin-bottom:44px}
@@ -603,18 +603,10 @@ section{padding:clamp(72px,10vw,128px) 0}
       <p class="eyebrow">Dicono di me</p>
       <h2 id="voci-title">Le parole di chi si allena con me.</h2>
     </div>
-    <figure class="voice voice-feature reveal">
-      <div class="qmark" aria-hidden="true">“</div>
-      <blockquote>Qui racconterò il mio percorso con Giordana: il mio punto di partenza, ciò che ho imparato e <em>come vivo oggi l’allenamento.</em></blockquote>
-      <figcaption class="person">
-        <span class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
-        <span><strong>Nome Cognome</strong><span class="role">Coaching online</span></span>
-      </figcaption>
-    </figure>
     <div class="voices-row">
       <figure class="voice voice-small reveal">
         <div class="qmark" aria-hidden="true">“</div>
-        <blockquote>Qui scriverò in poche righe cosa è cambiato nel mio modo di allenarmi e di vivere il mio corpo.</blockquote>
+        <blockquote>A breve le testimonianze saranno disponibili</blockquote>
         <figcaption class="person">
           <span class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
           <span><strong>Nome Cognome</strong><span class="role">Forza e ricomposizione</span></span>
@@ -622,7 +614,7 @@ section{padding:clamp(72px,10vw,128px) 0}
       </figure>
       <figure class="voice voice-small reveal">
         <div class="qmark" aria-hidden="true">“</div>
-        <blockquote>Qui racconterò la mia esperienza con un percorso costruito su di me e con l’approccio di Giordana.</blockquote>
+        <blockquote>A breve le testimonianze saranno disponibili</blockquote>
         <figcaption class="person">
           <span class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
           <span><strong>Nome Cognome</strong><span class="role">Mobilità e postura</span></span>
