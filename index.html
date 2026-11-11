@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giordana D’Alelio | Personal Trainer e Coaching Online</title>
+<meta name="description" content="Scopri Giordana D’Alelio, Personal Trainer certificata inVictus. Coaching online, allenamento della forza, ricomposizione corporea, mobilità e programmi personalizzati.">
+<meta name="theme-color" content="#F8F5EF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Giordana D’Alelio | Personal Trainer e Coaching Online">
+<meta property="og:description" content="Personal Trainer certificata inVictus. Coaching online, forza, ricomposizione corporea, mobilità e allenamento personalizzato.">
+<meta property="og:image" content="giordana-hero.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" as="image" href="giordana-hero.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --vermilion:#D92E12;
+  --vermilion-dark:#B8260E;
+  --navy:#18243B;
+  --ivory:#F8F5EF;
+  --white:#FFFFFF;
+  --sand:#E9DED3;
+  --charcoal:#292929;
+  --muted:#575757;
+  --line:#E9DED3;
+  --radius:14px;
+  --shadow:0 1px 2px rgba(24,36,59,.04), 0 10px 30px rgba(24,36,59,.06);
+  --header-h:76px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--charcoal);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Manrope,system-ui,sans-serif;color:var(--navy);margin:0;letter-spacing:-.015em;line-height:1.12}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--vermilion);outline-offset:3px;border-radius:4px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-9999px;top:8px;z-index:200;background:var(--navy);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none}
+.skip:focus{left:16px}
+.container{width:min(1180px,100% - 40px);margin-inline:auto}
+.narrow{width:min(780px,100% - 40px);margin-inline:auto}
+section{padding:clamp(72px,10vw,128px) 0}
+.bg-ivory{background:var(--ivory)}.bg-white{background:var(--white)}
+
+/* Section heads — always centred */
+.head{text-align:center;max-width:760px;margin:0 auto clamp(40px,6vw,64px)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:Inter,sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--vermilion);margin-bottom:18px}
+.eyebrow::before,.eyebrow::after{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
+.head h2{font-size:clamp(1.85rem,4.6vw,3.1rem);font-weight:800;text-transform:uppercase}
+.head .sub{margin:20px auto 0;color:var(--muted);font-size:1.075rem;max-width:620px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 28px;border-radius:8px;font-family:Inter,sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease)}
+.btn-primary{background:var(--vermilion);color:#fff}
+.btn-primary:hover{background:var(--vermilion-dark)}
+.btn-secondary{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn-secondary:hover{background:var(--navy);color:#fff}
+.cta-row{display:flex;justify-content:center;margin-top:clamp(40px,6vw,56px)}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:100;background:var(--ivory);border-bottom:1px solid var(--line)}
+.site-header .bar{width:min(1320px,100% - 40px);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--header-h)}
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1;flex:none}
+.brand-name{font-family:Manrope,sans-serif;font-weight:800;font-size:1.22rem;letter-spacing:-.01em;color:var(--navy);white-space:nowrap}
+.brand-role{display:flex;align-items:center;gap:8px;margin-top:7px;font-family:Inter,sans-serif;font-weight:500;font-size:.62rem;letter-spacing:.3em;color:var(--charcoal);text-transform:uppercase}
+.brand-role::before{content:"";width:16px;height:2px;background:var(--vermilion)}
+.nav{display:flex;align-items:center;flex:1;justify-content:flex-end;gap:clamp(14px,1.8vw,28px)}
+.nav ul{display:flex;gap:clamp(12px,1.35vw,24px);list-style:none;margin:0;padding:0}
+.nav a.link{font-size:clamp(.78rem,.72rem + .2vw,.88rem);font-weight:500;text-decoration:none;color:var(--charcoal);white-space:nowrap;padding:6px 0;position:relative}
+.nav a.link::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--vermilion);transition:right .3s var(--ease)}
+.nav a.link:hover::after,.nav a.link[aria-current="true"]::after{right:0}
+.nav .btn{min-height:44px;padding:10px 18px;font-size:.72rem;letter-spacing:.06em;white-space:nowrap;margin-left:auto}
+.menu-toggle{display:none;width:48px;height:48px;border:1px solid var(--line);background:var(--white);border-radius:10px;cursor:pointer;align-items:center;justify-content:center;flex:none}
+.menu-toggle span{display:block;width:20px;height:1.5px;background:var(--navy);position:relative;transition:background .3s}
+.menu-toggle span::before,.menu-toggle span::after{content:"";position:absolute;left:0;width:20px;height:1.5px;background:var(--navy);transition:transform .3s var(--ease)}
+.menu-toggle span::before{top:-6px}.menu-toggle span::after{top:6px}
+.menu-toggle[aria-expanded="true"] span{background:transparent}
+.menu-toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* Desktop: all items in one row, CTA at the right. Mobile/tablet: burger */
+@media (min-width:1024px){ .nav ul{margin-inline:auto} .nav .btn{margin-left:0} }
+@media (min-width:1024px) and (max-width:1199px){
+  .site-header .bar{width:calc(100% - 32px);gap:14px}
+  .brand-name{font-size:1.06rem}
+  .brand-role{font-size:.56rem;letter-spacing:.24em}
+  .nav{gap:12px}
+  .nav ul{gap:11px}
+  .nav a.link{font-size:.75rem}
+  .nav .btn{padding:9px 12px;font-size:.64rem;letter-spacing:.04em}
+}
+@media (max-width:1023px){
+  .menu-toggle{display:inline-flex}
+  .nav{position:fixed;inset:var(--header-h) 0 auto 0;background:var(--ivory);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 24px;max-height:calc(100dvh - var(--header-h));overflow-y:auto;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s .3s}
+  .nav.open{visibility:visible;opacity:1;transform:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+  .nav ul{flex-direction:column;gap:0}
+  .nav a.link{display:block;padding:14px 0;font-size:1rem;border-bottom:1px solid var(--line)}
+  .nav a.link::after{display:none}
+  .nav .btn{margin:20px 0 0;min-height:52px;font-size:.84rem}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:calc(100svh - var(--header-h));display:flex;align-items:center;padding:clamp(64px,10vw,120px) 0;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:53% 22%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(248,245,239,.64) 0%,rgba(255,255,255,.58) 50%,rgba(248,245,239,.68) 100%)}
+.hero .lead{color:#1f1f1f;font-weight:500}
+.hero-inner{text-align:center;max-width:980px;margin-inline:auto}
+.hero .eyebrow{font-size:.74rem;background:rgba(255,255,255,.88);padding:7px 16px;border-radius:999px}
+.hero .eyebrow::before,.hero .eyebrow::after{display:none}
+.hero .btn-secondary{background:rgba(255,255,255,.7)}
+.hero .btn-secondary:hover{background:var(--navy)}
+.hero h1{font-size:clamp(2.2rem,6.6vw,5rem);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:1.02}
+.hero h1 .l1{display:block;color:var(--navy)}
+.hero h1 .l2{display:block;color:var(--vermilion)}
+@media (min-width:768px){ .hero h1 .l1,.hero h1 .l2{white-space:nowrap} }
+.hero .lead{margin:28px auto 0;max-width:640px;font-size:clamp(1.02rem,1.6vw,1.17rem);color:var(--charcoal)}
+.hero .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:38px}
+.hero .detail{display:inline-flex;align-items:center;gap:14px;margin-top:44px;font-size:.76rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--navy)}
+.hero .detail i{width:6px;height:6px;border-radius:50%;background:var(--vermilion)}
+
+/* ---------- Chi sono ---------- */
+.about{display:grid;grid-template-columns:300px minmax(0,1fr);grid-template-areas:"head head" "photo text";gap:0 clamp(48px,7vw,96px);align-items:center;max-width:1040px;margin-inline:auto}
+.about .head{grid-area:head}
+.portrait{grid-area:photo;position:relative;justify-self:center;width:100%;margin:0}
+.portrait::before{content:"";position:absolute;inset:-14px;border:1px solid var(--sand);border-radius:50%}
+.portrait::after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--vermilion);top:10%;right:5%}
+.portrait img{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover}
+.about-text{grid-area:text}
+.about-text strong{color:var(--navy);font-weight:600}
+.about-text .quote{font-family:Manrope,sans-serif;font-weight:700;font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.35;color:var(--navy);border-left:2px solid var(--vermilion);padding-left:20px;margin:28px 0 0}
+
+/* ---------- A chi mi rivolgo ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,32px)}
+.target{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(32px,3.6vw,44px) clamp(26px,3vw,36px);text-align:center;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.target:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(24,36,59,.05),0 18px 40px rgba(24,36,59,.09)}
+.icon-badge{position:relative;width:76px;height:76px;margin:0 auto 26px;border-radius:50%;display:grid;place-items:center;background:var(--ivory);color:var(--vermilion)}
+.icon-badge::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid var(--sand);transition:transform .5s var(--ease),border-color .4s}
+.target:hover .icon-badge::after{transform:scale(1.08);border-color:var(--vermilion)}
+.icon-badge svg{width:34px;height:34px}
+.target h3{font-size:clamp(1.15rem,1.8vw,1.35rem);font-weight:800;text-transform:uppercase;margin-bottom:14px}
+.target p{color:var(--muted);font-size:.98rem;margin:0}
+
+/* ---------- Approccio ---------- */
+.approach-intro{text-align:center;font-size:1.1rem;max-width:720px;margin:-12px auto clamp(56px,8vw,96px)}
+.approach-intro strong{color:var(--navy);font-weight:600}
+.cross-wrap{position:relative;max-width:1000px;margin-inline:auto}
+.cross{position:relative;display:grid;grid-template-columns:1fr 1fr;list-style:none;margin:0;padding:0}
+.cross::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--sand) 18%,var(--sand) 82%,transparent)}
+.cross::after{content:"";position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sand) 18%,var(--sand) 82%,transparent)}
+.cross-dot{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--vermilion);z-index:2;box-shadow:0 0 0 8px var(--white),0 0 0 9px var(--sand)}
+.pillar{position:relative;text-align:center;padding:clamp(40px,6vw,72px) clamp(20px,4vw,56px);overflow:hidden}
+.pillar .ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-.04em;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px #F1E9E0;white-space:nowrap;pointer-events:none;user-select:none;transition:-webkit-text-stroke-color .5s var(--ease),transform .6s var(--ease)}
+.pillar:hover .ghost{-webkit-text-stroke-color:rgba(217,46,18,.28);transform:translate(-50%,-50%) scale(1.04)}
+.pillar h3{position:relative;font-size:clamp(1.15rem,1.8vw,1.4rem);font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.pillar h3::after{content:"";display:block;width:28px;height:2px;background:var(--vermilion);margin:14px auto 0;transition:width .4s var(--ease)}
+.pillar:hover h3::after{width:56px}
+.pillar p{position:relative;margin:0 auto;max-width:340px;color:var(--muted)}
+
+/* ---------- Servizi ---------- */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2vw,26px)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;height:100%;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(24,36,59,.05),0 18px 40px rgba(24,36,59,.09)}
+.card-media{aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.card:hover .card-media img{transform:scale(1.04)}
+.card-body{padding:24px 24px 28px;flex:1}
+.card h3{font-size:1.08rem;font-weight:800;text-transform:uppercase;margin-bottom:12px;letter-spacing:-.005em}
+.card p{color:var(--muted);font-size:.93rem;line-height:1.65;margin:0}
+
+/* ---------- Come funziona ---------- */
+.process{position:relative;--p:0;--n:clamp(3.2rem,6vw,4.6rem)}
+.steps{position:relative;list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,44px)}
+.process .track,.process .fill{position:absolute;left:0;right:0;top:calc(var(--n) / 2 - 1px);height:2px;border-radius:2px}
+.process .track{background:var(--sand)}
+.process .fill{background:linear-gradient(90deg,var(--vermilion),#F06A4F);transform-origin:left;transform:scaleX(var(--p));box-shadow:0 0 14px rgba(217,46,18,.35)}
+.step{position:relative;padding-top:0}
+.step .num{position:relative;display:inline-block;font-family:Manrope,sans-serif;font-weight:800;font-size:var(--n);line-height:1;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px var(--navy);background:var(--white);padding-right:14px;transition:color .6s var(--ease),-webkit-text-stroke-color .6s}
+.step .dot{position:absolute;top:calc(50% - 7px);left:calc(100% - 7px);width:14px;height:14px;border-radius:50%;background:var(--white);border:2px solid var(--sand);transition:background .4s,border-color .4s}
+.step .num-wrap{position:relative;display:inline-block}
+.step h3{font-size:1.12rem;font-weight:800;text-transform:uppercase;margin:24px 0 10px;transition:color .4s}
+.step p{color:var(--muted);margin:0;opacity:.55;transform:translateY(8px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.step.on .num{color:var(--navy)}
+.step.on .dot{background:var(--vermilion);border-color:var(--vermilion);animation:pulse 2.4s ease-out infinite}
+.step.on p{opacity:1;transform:none}
+.step.on h3{color:var(--navy)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,46,18,.45)}70%{box-shadow:0 0 0 14px rgba(217,46,18,0)}100%{box-shadow:0 0 0 0 rgba(217,46,18,0)}}
+
+/* ---------- Dove ricevo ---------- */
+.places{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:640px;margin-inline:auto}
+.place{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:30px 26px;text-align:center}
+.place.dark{background:var(--navy);border-color:var(--navy)}
+.place .ico{width:46px;height:46px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--sand);color:var(--vermilion)}
+.place.dark .ico{border-color:rgba(255,255,255,.3);color:#fff}
+.place .ico svg{width:21px;height:21px}
+.place h3{font-size:.78rem;font-family:Inter,sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--vermilion);margin-bottom:8px}
+.place.dark h3{color:#F4A391}
+.place p{margin:0;font-family:Manrope,sans-serif;font-weight:800;font-size:1.3rem;color:var(--navy);text-transform:uppercase;letter-spacing:-.01em}
+.place.dark p{color:#fff}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:12px}
+.faq-item{background:var(--ivory);border:1px solid var(--line);border-radius:12px;transition:background .3s,border-color .3s}
+.faq-item.open{border-color:var(--sand);background:var(--ivory)}
+.faq-q{margin:0;font-size:inherit}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px;background:none;border:0;text-align:left;cursor:pointer;font-family:Inter,sans-serif;font-weight:600;font-size:clamp(1rem,1.6vw,1.08rem);color:var(--navy);line-height:1.45;border-radius:12px}
+.faq-btn:hover{color:var(--vermilion)}
+.faq-icon{flex:none;width:34px;height:34px;border:1px solid var(--sand);background:var(--white);border-radius:50%;position:relative;transition:border-color .3s}
+.faq-icon::before,.faq-icon::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--vermilion);transform:translate(-50%,-50%)}
+.faq-icon::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .35s var(--ease)}
+.faq-btn[aria-expanded="true"] .faq-icon{border-color:var(--vermilion)}
+.faq-btn[aria-expanded="true"] .faq-icon::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.faq-panel>div{overflow:hidden}
+.faq-panel p{margin:0;padding:0 80px 24px 24px;color:var(--muted)}
+.faq-item.open .faq-panel{grid-template-rows:1fr}
+
+/* ---------- Contatti ---------- */
+.form-card{max-width:480px;margin-inline:auto;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(22px,3vw,28px)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.field{display:flex;flex-direction:column;gap:4px}
+.field.full{grid-column:1/-1}
+.field label{font-size:.78rem;font-weight:600;color:var(--navy)}
+.field label .opt{font-weight:400;color:var(--muted)}
+.field input,.field select,.field textarea{font:inherit;font-size:.92rem;line-height:1.4;color:var(--charcoal);background:var(--ivory);border:1px solid var(--sand);border-radius:8px;padding:9px 12px;min-height:42px;width:100%;transition:border-color .25s,background .25s}
+.field textarea{min-height:84px;resize:vertical}
+.field select{min-height:42px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2318243B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:40px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);background:var(--white);box-shadow:0 0 0 3px rgba(24,36,59,.12)}
+.field .hint{font-size:.74rem;color:var(--muted);line-height:1.4}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:var(--muted);line-height:1.45}
+.consent input{flex:none;width:18px;height:18px;margin-top:1px;accent-color:var(--vermilion)}
+.consent a{color:var(--navy)}
+.form-card .btn{width:100%;margin-top:14px;min-height:46px;padding:12px 20px;font-size:.82rem}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center;margin:12px 0 0}
+.form-status{font-size:.9rem;text-align:center;margin:12px 0 0;color:var(--navy);min-height:1px}
+.form-status.err{color:var(--vermilion-dark)}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--navy);color:#C9D0DC;padding:clamp(64px,8vw,96px) 0 32px}
+.footer-top{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
+.site-footer .brand-name{color:#fff;font-size:1.4rem}
+.site-footer .brand-role{color:#C9D0DC}
+.footer-claim{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(1.2rem,2.2vw,1.5rem);color:#fff;line-height:1.25;margin-top:28px;max-width:360px;text-transform:uppercase}
+.footer-claim span{color:#F06A4F}
+.footer-links{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+.footer-links li{break-inside:avoid}
+.footer-links a{display:inline-block;padding:7px 0;font-size:.95rem;text-decoration:none;color:#C9D0DC;transition:color .3s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding-top:28px;font-size:.84rem}
+.footer-bottom a{color:#C9D0DC;text-decoration:none}
+.footer-bottom a:hover{color:#fff}
+.footer-bottom .contacts{display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .grid-4{grid-template-columns:repeat(2,1fr);max-width:760px;margin-inline:auto}
+}
+@media (max-width:980px){
+  .grid-3{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .about{grid-template-columns:1fr;grid-template-areas:"photo" "head" "text";max-width:680px}
+  .portrait{width:min(62%,240px);margin-bottom:44px}
+  .about .head{margin-bottom:32px}
+  .footer-top{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  /* Come funziona — vertical */
+  .process{max-width:560px;margin-inline:auto}
+  .steps{grid-template-columns:1fr;gap:0}
+  .process .track,.process .fill{top:0;bottom:0;left:27px;right:auto;width:2px;height:auto}
+  .process .fill{transform-origin:top;transform:scaleY(var(--p));background:linear-gradient(180deg,var(--vermilion),#F06A4F)}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:0 22px;padding-bottom:44px}
+  .step:last-child{padding-bottom:0}
+  .step .num-wrap{grid-row:span 2;display:flex;justify-content:center;padding-top:2px}
+  .step .num{font-size:2.3rem;padding:6px 0;-webkit-text-stroke-width:1.2px;text-align:center;width:56px}
+  .step .dot{display:none}
+  .step h3{margin:10px 0 8px}
+}
+@media (max-width:720px){
+  .cross{grid-template-columns:1fr}
+  .cross::before,.cross-dot{display:none}
+  .cross::after{display:none}
+  .pillar{padding:44px 8px}
+  .pillar + .pillar{border-top:1px solid var(--sand)}
+  .pillar + .pillar::before{content:"";position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--vermilion);box-shadow:0 0 0 6px var(--white)}
+}
+@media (max-width:640px){
+  .container,.narrow{width:calc(100% - 32px)}
+  .site-header .bar{width:calc(100% - 32px)}
+  .grid-4{grid-template-columns:1fr;max-width:460px}
+  .hero .eyebrow{font-size:.64rem;letter-spacing:.1em;padding:6px 12px;white-space:nowrap}
+  .hero .ctas{flex-direction:column;align-items:stretch;max-width:340px;margin-inline:auto}
+  .hero .detail{gap:10px;letter-spacing:.16em;font-size:.7rem}
+  .brand-name{font-size:1.08rem}
+  .brand-role{font-size:.58rem;letter-spacing:.26em}
+  .faq-btn{padding:20px 18px}
+  .faq-panel p{padding:0 18px 22px}
+  .form-grid{grid-template-columns:1fr}
+  .footer-links{columns:1}
+}
+@media (max-width:440px){ .places{grid-template-columns:1fr;max-width:300px} }
+@media (max-width:360px){
+  .hero h1{font-size:1.95rem}
+  .head h2{font-size:1.6rem}
+  .btn{padding:14px 20px;letter-spacing:.05em}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms !important;animation:none !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<!-- 1. HEADER -->
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="#home" aria-label="Giordana D’Alelio, Personal Trainer — torna all’inizio">
+      <span class="brand-name">Giordana D’Alelio</span>
+      <span class="brand-role">Personal Trainer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Apri il menu"><span></span></button>
+    <nav class="nav" id="nav" aria-label="Navigazione principale">
+      <ul>
+        <li><a class="link" href="#chi-sono">Chi sono</a></li>
+        <li><a class="link" href="#a-chi-mi-rivolgo">A chi mi rivolgo</a></li>
+        <li><a class="link" href="#approccio">Approccio</a></li>
+        <li><a class="link" href="#servizi">Servizi</a></li>
+        <li><a class="link" href="#come-funziona">Come funziona</a></li>
+        <li><a class="link" href="#dove-ricevo">Dove ricevo</a></li>
+        <li><a class="link" href="#faq">FAQ</a></li>
+        <li><a class="link" href="#contatti">Contatti</a></li>
+      </ul>
+      <a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 2. HERO -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-media">
+    <img src="giordana-hero.webp" alt="Giordana D’Alelio in abbigliamento sportivo su sfondo rosso" width="1536" height="1024" fetchpriority="high" decoding="async">
+  </div>
+  <div class="container hero-inner">
+    <p class="eyebrow">Giordana D’Alelio · Personal Trainer</p>
+    <h1 id="hero-title"><span class="l1">Allenare il corpo,</span> <span class="l2">partendo da te.</span></h1>
+    <p class="lead">Un percorso di allenamento costruito intorno a te, per lavorare su forza, composizione corporea e qualità del movimento, con un approccio attento alle tue esigenze e al tuo stile di vita.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a>
+      <a class="btn btn-secondary" href="#servizi">Scopri i miei servizi</a>
+    </div>
+    <p class="detail">Personal training <i aria-hidden="true"></i> Coaching online</p>
+  </div>
+</section>
+
+<!-- 3. CHI SONO -->
+<section class="bg-white" id="chi-sono" aria-labelledby="chi-sono-title">
+  <div class="container">
+    <div class="about">
+      <figure class="portrait reveal">
+        <!-- Fotografia rotonda originale, non modificata -->
+        <img src="giordana-dalelio.webp" alt="Ritratto di Giordana D’Alelio, Personal Trainer, in top bianco e leggings blu su sfondo rosso" width="800" height="800" loading="lazy" decoding="async">
+      </figure>
+      <div class="head reveal">
+        <p class="eyebrow">Chi sono</p>
+        <h2 id="chi-sono-title">Mi presento...</h2>
+      </div>
+      <div class="about-text reveal">
+        <p>Sono <strong>Giordana D’Alelio, Personal Trainer certificata inVictus</strong>.</p>
+        <p>Nel mio percorso ho scelto di approfondire l’allenamento da diverse prospettive, perché credo che il corpo non possa essere considerato soltanto attraverso il suo aspetto estetico.</p>
+        <p>La <strong>forza</strong>, la <strong>mobilità</strong>, la <strong>qualità del movimento</strong> e la relazione che costruiamo con il nostro corpo sono elementi che meritano attenzione.</p>
+        <p>La mia formazione comprende approfondimenti in <strong>mobilità articolare avanzata</strong> e <strong>biomeccanica avanzata</strong>, con un interesse particolare per l’allenamento posturale, il lavoro sulla forza e l’esercizio personalizzato.</p>
+        <p>Accanto alla formazione sportiva, il mio percorso di studi comprende la Filosofia e attualmente approfondisco la Psicologia.</p>
+        <p>Credo nel valore della <strong>comunicazione, dell’ascolto e della personalizzazione</strong>. Ogni persona arriva con una storia, esigenze e obiettivi differenti. Per questo non cerco di adattare le persone a un programma standard, ma di costruire un allenamento che tenga conto delle loro caratteristiche.</p>
+        <p class="quote">Per me allenarsi significa lavorare sul corpo, senza perdere di vista la persona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. A CHI MI RIVOLGO -->
+<section class="bg-ivory" id="a-chi-mi-rivolgo" aria-labelledby="target-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">A chi mi rivolgo</p>
+      <h2 id="target-title">Ogni corpo ha bisogno di un percorso diverso.</h2>
+      <p class="sub">Non esiste un unico modo di allenarsi. Esiste il percorso più adatto alle tue esigenze, ai tuoi obiettivi e al tuo punto di partenza.</p>
+    </div>
+    <div class="grid-3">
+      <article class="target reveal">
+        <div class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v6M8 10v12M24 10v12M28 13v6M8 16h16"/></svg>
+        </div>
+        <h3>A chi vuole diventare più forte</h3>
+        <p>Per chi desidera sviluppare forza, lavorare sulla massa muscolare e migliorare la propria composizione corporea attraverso un allenamento progressivo.</p>
+      </article>
+      <article class="target reveal">
+        <div class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="6" r="2.5"/><path d="M16 10v8M10 13l6 2 6-2M16 18l-5 8M16 18l5 8"/><path d="M5 22c2-6 5-9 5-9M27 22c-2-6-5-9-5-9" opacity=".55"/></svg>
+        </div>
+        <h3>A chi desidera muoversi meglio</h3>
+        <p>Per chi desidera dedicare attenzione alla mobilità, alla qualità del movimento e al controllo corporeo attraverso esercizi personalizzati.</p>
+      </article>
+      <article class="target reveal">
+        <div class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27s-10-6-10-13a5.5 5.5 0 0 1 10-3.2A5.5 5.5 0 0 1 26 14c0 7-10 13-10 13z"/><path d="M11 16h3l1.5-3 2 6 1.5-3h2"/></svg>
+        </div>
+        <h3>A chi ha esigenze specifiche</h3>
+        <p>Per chi cerca un programma che tenga conto delle proprie caratteristiche individuali e di eventuali condizioni che richiedono particolare attenzione, anche in collaborazione con professionisti sanitari quando necessario.</p>
+      </article>
+    </div>
+    <div class="cta-row"><a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a></div>
+  </div>
+</section>
+
+<!-- 5. IL MIO APPROCCIO -->
+<section class="bg-white" id="approccio" aria-labelledby="approccio-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Il mio approccio</p>
+      <h2 id="approccio-title">Tecnica, ascolto, consapevolezza.</h2>
+    </div>
+    <div class="approach-intro reveal">
+      <p>Credo che un percorso di allenamento efficace debba partire dalla <strong>comprensione della persona</strong>: non soltanto dagli obiettivi estetici, ma anche dalle caratteristiche fisiche, dalle abitudini e dal modo in cui ciascuno vive il proprio corpo.</p>
+      <p style="margin:0">Per questo unisco <strong>preparazione tecnica e attenzione individuale</strong>.</p>
+    </div>
+    <div class="cross-wrap">
+    <ul class="cross">
+      <li class="pillar reveal">
+        <span class="ghost" aria-hidden="true">Ascolto</span>
+        <h3>Ascolto</h3>
+        <p>Parto da te: dalle tue esigenze, dai tuoi obiettivi e dal tuo punto di partenza.</p>
+      </li>
+      <li class="pillar reveal">
+        <span class="ghost" aria-hidden="true">Su misura</span>
+        <h3>Personalizzazione</h3>
+        <p>Costruisco programmi coerenti con le tue caratteristiche individuali, mai standard.</p>
+      </li>
+      <li class="pillar reveal">
+        <span class="ghost" aria-hidden="true">Tecnica</span>
+        <h3>Tecnica</h3>
+        <p>Curo l’esecuzione e la qualità del movimento, con attenzione a biomeccanica, forza e mobilità.</p>
+      </li>
+      <li class="pillar reveal">
+        <span class="ghost" aria-hidden="true">Continuità</span>
+        <h3>Continuità</h3>
+        <p>Favorisco un rapporto sostenibile e consapevole con l’allenamento, nel tempo.</p>
+      </li>
+    </ul>
+      <span class="cross-dot" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- 6. I SERVIZI -->
+<section class="bg-ivory" id="servizi" aria-labelledby="servizi-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">I miei servizi</p>
+      <h2 id="servizi-title">Un allenamento costruito intorno a te.</h2>
+      <p class="sub">Percorsi personalizzati per lavorare su forza, movimento e composizione corporea, con attenzione alle esigenze individuali.</p>
+    </div>
+    <div class="grid-4">
+      <article class="card reveal">
+        <div class="card-media"><img src="https://images.unsplash.com/photo-1780510418967-e0e3ae2109e2?w=640&h=480&q=72&auto=format&fit=crop&crop=focalpoint&fp-x=.62&fp-y=.7&fp-z=1.4" alt="Mani che consultano un programma di allenamento su un tablet, accanto a un manubrio" loading="lazy" decoding="async" width="640" height="480"></div>
+        <div class="card-body">
+          <h3>Coaching online</h3>
+          <p>Ti seguo a distanza con una programmazione costruita sui tuoi obiettivi, sul tuo livello e sul tempo che hai a disposizione. Ovunque ti alleni, il percorso resta personalizzato.</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-media"><img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=640&h=480&q=70&auto=format&fit=crop&crop=top" alt="Atleta di spalle che esegue un esercizio di forza con il bilanciere" loading="lazy" decoding="async" width="640" height="480"></div>
+        <div class="card-body">
+          <h3>Forza e ricomposizione corporea</h3>
+          <p>Imposto un lavoro con sovraccarichi e una progressione graduale per sviluppare forza e massa muscolare e migliorare la tua composizione corporea, con attenzione costante alla tecnica.</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-media"><img src="https://images.unsplash.com/photo-1594269807754-7b7926246d65?w=640&h=480&q=70&auto=format&fit=crop" alt="Atleta di spalle che esegue un esercizio di stabilità e controllo con un elastico" loading="lazy" decoding="async" width="640" height="480"></div>
+        <div class="card-body">
+          <h3>Mobilità e allenamento posturale</h3>
+          <p>Dedico spazio alla mobilità articolare, al controllo del corpo e alla qualità del movimento, mettendo in pratica la mia formazione in biomeccanica. Non è un trattamento fisioterapico, ma allenamento.</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-media"><img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=640&h=480&q=70&auto=format&fit=crop" alt="Manubri ed elastico da allenamento su un piano in legno" loading="lazy" decoding="async" width="640" height="480"></div>
+        <div class="card-body">
+          <h3>Allenamento adattato</h3>
+          <p>Costruisco programmi di esercizio per chi ha esigenze specifiche, con particolare attenzione al dolore cronico e al lipedema, ambiti che approfondisco nella mia formazione. Il percorso non sostituisce valutazioni, diagnosi o trattamenti sanitari.</p>
+        </div>
+      </article>
+    </div>
+    <div class="cta-row"><a class="btn btn-primary" href="#contatti">Richiedi una consulenza</a></div>
+  </div>
+</section>
+
+<!-- 7. COME FUNZIONA -->
+<section class="bg-white" id="come-funziona" aria-labelledby="come-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Come funziona</p>
+      <h2 id="come-title">Il tuo percorso inizia da te.</h2>
+    </div>
+    <div class="process" id="process">
+      <span class="track" aria-hidden="true"></span>
+      <span class="fill" aria-hidden="true"></span>
+      <ol class="steps">
+      <li class="step">
+        <div class="num-wrap"><span class="num" aria-hidden="true">01</span><span class="dot" aria-hidden="true"></span></div>
+        <h3>Raccontami i tuoi obiettivi</h3>
+        <p>Contattami per condividere le tue esigenze e ricevere informazioni sul percorso.</p>
+      </li>
+      <li class="step">
+        <div class="num-wrap"><span class="num" aria-hidden="true">02</span><span class="dot" aria-hidden="true"></span></div>
+        <h3>Definiamo il punto di partenza</h3>
+        <p>Approfondiamo insieme obiettivi e caratteristiche individuali per capire quale proposta possa essere più adatta a te.</p>
+      </li>
+      <li class="step">
+        <div class="num-wrap"><span class="num" aria-hidden="true">03</span><span class="dot" aria-hidden="true"></span></div>
+        <h3>Costruisco il tuo programma</h3>
+        <p>Elaboro un percorso personalizzato, coerente con i tuoi obiettivi, il tuo livello e il tuo stile di vita.</p>
+      </li>
+      <li class="step">
+        <div class="num-wrap"><span class="num" aria-hidden="true">04</span><span class="dot" aria-hidden="true"></span></div>
+        <h3>Inizia il tuo allenamento</h3>
+        <p>Il percorso prosegue secondo modalità e strumenti concordati insieme.</p>
+      </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 8. DOVE RICEVO -->
+<section class="bg-ivory" id="dove-ricevo" aria-labelledby="dove-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Dove ricevo</p>
+      <h2 id="dove-title">Il tuo allenamento, anche online.</h2>
+    </div>
+    <div class="places">
+      <div class="place reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <h3>Indirizzo</h3>
+        <p>In arrivo</p>
+      </div>
+      <div class="place dark reveal">
+        <div class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3>Online</h3>
+        <p>Ovunque tu sia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="bg-white" id="faq" aria-labelledby="faq-title">
+  <div class="narrow">
+    <div class="head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Le risposte alle tue domande.</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <h3 class="faq-q"><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">Posso iniziare anche se non ho esperienza in palestra?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn"><div><p>Certo. Imposto il percorso partendo dal tuo livello, dai tuoi obiettivi e dalle tue caratteristiche individuali. Contattami e valuteremo insieme la proposta più adatta a te.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">Offri anche coaching online?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn"><div><p>Sì, propongo coaching online. Se vuoi conoscere le modalità di svolgimento e gli strumenti che utilizzo, scrivimi e ti darò tutte le informazioni.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">Posso allenarmi se ho problemi posturali?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn"><div><p>Nel mio lavoro dedico attenzione alla mobilità e alla qualità del movimento. Se hai problematiche mediche, ti chiedo di seguire le indicazioni dei professionisti sanitari che ti seguono: il mio allenamento non sostituisce il loro lavoro.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">Ti occupi anche di dolore cronico e lipedema?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn"><div><p>Sì, sono ambiti che approfondisco nella mia formazione. Valuto ogni percorso di esercizio individualmente e ci tengo a essere chiara: l’allenamento non sostituisce diagnosi o trattamenti sanitari.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q"><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">Come posso richiedere una consulenza?<span class="faq-icon" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-5" role="region" aria-labelledby="faq-5-btn"><div><p>Puoi compilare il modulo qui sotto, nella sezione Contatti: ti risponderò con tutte le informazioni sui percorsi che propongo.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CONTATTI -->
+<section class="bg-ivory" id="contatti" aria-labelledby="contatti-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Contatti</p>
+      <h2 id="contatti-title">Il primo passo parte da qui.</h2>
+    </div>
+    <form class="form-card reveal" id="contact-form" novalidate>
+      <div class="form-grid">
+        <div class="field">
+          <label for="f-nome">Nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-tel">Telefono <span class="opt">(facoltativo)</span></label>
+          <input id="f-tel" name="telefono" type="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="f-servizio">Servizio di interesse</label>
+          <select id="f-servizio" name="servizio" required>
+            <option value="">Seleziona</option>
+            <option>Coaching online</option>
+            <option>Forza e ricomposizione corporea</option>
+            <option>Mobilità e allenamento posturale</option>
+            <option>Allenamento adattato</option>
+            <option>Non lo so ancora</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="f-msg">Messaggio</label>
+          <textarea id="f-msg" name="messaggio" required aria-describedby="f-msg-hint"></textarea>
+          <span class="hint" id="f-msg-hint">Raccontami i tuoi obiettivi. Non serve inserire informazioni sanitarie dettagliate.</span>
+        </div>
+        <div class="field full">
+          <label class="consent"><input type="checkbox" name="privacy" id="f-privacy" required> <span>Ho letto l’<a href="privacy-policy.html">informativa privacy</a> e acconsento al trattamento dei miei dati per ricevere una risposta alla mia richiesta.</span></label>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Richiedi una consulenza</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- 11. FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="#home" aria-label="Giordana D’Alelio, Personal Trainer — torna all’inizio">
+          <span class="brand-name">Giordana D’Alelio</span>
+          <span class="brand-role">Personal Trainer</span>
+        </a>
+        <p class="footer-claim">Allenare il corpo, <span>partendo dalla persona.</span></p>
+      </div>
+      <nav aria-label="Link del footer">
+        <ul class="footer-links">
+          <li><a href="#chi-sono">Chi sono</a></li>
+          <li><a href="#a-chi-mi-rivolgo">A chi mi rivolgo</a></li>
+          <li><a href="#approccio">Approccio</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#come-funziona">Come funziona</a></li>
+          <li><a href="#dove-ricevo">Dove ricevo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <!-- TODO: collegare le pagine legali definitive -->
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="cookie-policy.html">Cookie Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <!-- TODO: inserire Partita IVA e dati fiscali confermati -->
+      <span>© <span id="year">2026</span> Giordana D’Alelio · Personal Trainer · Napoli</span>
+      <span class="contacts">
+        <a href="mailto:daleliogiordana@gmail.com">daleliogiordana@gmail.com</a>
+        <a href="https://www.instagram.com/giordana_daleliopt_/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (si apre in una nuova scheda)</span></a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Mobile menu
+  var toggle = document.querySelector('.menu-toggle'), nav = document.getElementById('nav');
+  function setMenu(open){
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    nav.classList.toggle('open', open);
+  }
+  toggle.addEventListener('click', function(){ setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); toggle.focus(); }
+  });
+  matchMedia('(min-width:1024px)').addEventListener('change', function(m){ if (m.matches) setMenu(false); });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', open);
+      btn.closest('.faq-item').classList.toggle('open', open);
+    });
+  });
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+
+  // Come funziona — scroll-linked progress line
+  var proc = document.getElementById('process'), steps = proc.querySelectorAll('.step');
+  function updateProcess(){
+    var p = 1;
+    if (!reduce) {
+      var r = proc.getBoundingClientRect(), vh = window.innerHeight;
+      p = (vh * 0.72 - r.top) / (r.height * 0.85);
+      p = Math.max(0, Math.min(1, p));
+    }
+    proc.style.setProperty('--p', p.toFixed(3));
+    steps.forEach(function(s, i){ s.classList.toggle('on', p >= i / steps.length + 0.02 || p === 1); });
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ updateProcess(); ticking = false; }); } }, {passive:true});
+  window.addEventListener('resize', updateProcess);
+  updateProcess();
+
+  // Active nav link
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a.link'));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          links.forEach(function(a){ a.removeAttribute('aria-current'); });
+          var i = secs.indexOf(en.target); if (i > -1) links[i].setAttribute('aria-current','true');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){ if (s) so.observe(s); });
+  }
+
+  // Contact form — validates, then opens the visitor's email app with the request ready to send
+  var form = document.getElementById('contact-form'), status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.classList.remove('err');
+    if (!form.checkValidity()) {
+      var bad = form.querySelector(':invalid');
+      status.textContent = bad && bad.type === 'checkbox' ? 'Per inviare la richiesta è necessario accettare l’informativa privacy.' : 'Compila i campi obbligatori con dati validi.';
+      status.classList.add('err');
+      if (bad) bad.focus();
+      return;
+    }
+    var d = new FormData(form);
+    var body = 'Nome: ' + d.get('nome') + '\nEmail: ' + d.get('email') +
+      (d.get('telefono') ? '\nTelefono: ' + d.get('telefono') : '') +
+      '\nServizio di interesse: ' + d.get('servizio') + '\n\n' + d.get('messaggio');
+    window.location.href = 'mailto:daleliogiordana@gmail.com?subject=' +
+      encodeURIComponent('Richiesta di consulenza – ' + d.get('nome')) + '&body=' + encodeURIComponent(body);
+    status.textContent = 'Si sta aprendo il tuo programma di posta con la richiesta già compilata: premi Invia per completarla.';
+  });
+})();
+</script>
+</body>
+</html>
